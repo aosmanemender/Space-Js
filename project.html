@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Untitled</title>
+<style>
+h1{color:red;text-align:center;}
+
+img{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+}
+</style>
+</head>
+<body onload="move();show();" background="pot1.jpg">
+
+<img draggable="false" id="i1" src="sat.png"/>
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<h1  onclick="this.innerHTML='Welcome To Space'" ondblclick="sh();" id="h">Ooops!</h1><br>
+<img draggable="false" id="i" src="Terra_globe_icon_light.png"/>
+
+
+<script>
+function sh() {
+a=document.getElementById("h");
+a.style.fontFamily="Impact,Charcoal,sans-serif";}
+
+function show(){
+val=0;
+myh=setInterval(function(){
+      window.h.style.fontSize=val++;
+        if(val>100) clearInterval(myh);},45);
+				}
+				
+function move() {   
+   p=document.body.clientWidth-150;
+	 pos = 0;
+	 my=setInterval(function(){
+	 window.i.style.left=pos++ + "px";
+   if(pos==p)  clearInterval(my);},1); 
+	 
+	  po=p;
+ im=setInterval(function(){
+window.i1.style.left=po-- + "px";
+   if(po==0)  clearInterval(im);},1);
+}
+
+
+</script>
+</body>
+</html>
